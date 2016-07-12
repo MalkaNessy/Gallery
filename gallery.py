@@ -154,7 +154,7 @@ def big_html(id):
     
 
   elif id==len(foto_list)-1:               #(если картинка последняя в списке)
-    html= html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + '</body></html>'  
+    html= html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn + '</body></html>'  
 
   else:
     html=html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn +'</body></html>'
@@ -175,40 +175,47 @@ closebtn = '''
 def prevButton (id):
   if id==0:
     html= '''
- 
 	<div class="btn">
 	    <a href="/">
 		<img src="/btn/prev" alt="">
 	    </a>
         </div> 			
-'''
+    '''
     
   else:  
     id=int(id)-1
     id=str(id)
     html= '''
- 
 	<div class="btn">
 	    <a href="/%s.html">
 		<img src="/btn/prev" alt="">
 	    </a>
         </div> 			
-''' % (id)
+    ''' % (id)
   return html
 
 
 
 def nextButton (id):
-  id=int(id)+1
-  id=str(id)
-  html = '''
- 
+  if id==len(foto_list)-1:
+    html= '''
 	<div class="btn">
-	    <a href="/%s.html">
+	    <a href="/">
 		<img src="/btn/next" alt="">
 	    </a>
         </div> 			
-'''  % (id)
+    '''
+    
+  else: 
+    id=int(id)+1
+    id=str(id)
+    html = '''
+      <div class="btn">
+	  <a href="/%s.html">
+	      <img src="/btn/next" alt="">
+	  </a>
+      </div> 			
+      '''  % (id)
   return html
 
 
