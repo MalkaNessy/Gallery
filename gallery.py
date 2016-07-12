@@ -148,16 +148,7 @@ def big_html(id):
   prevbtn = prevButton(id)
   nextbtn = nextButton(id)
   
-  if id==0:              #(если картинка первая в списке)
-    html=html+ '<div id="bigpage">' + prevbtn + '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn +'</body></html>'
-
-    
-
-  elif id==len(foto_list)-1:               #(если картинка последняя в списке)
-    html= html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn + '</body></html>'  
-
-  else:
-    html=html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn +'</body></html>'
+  html=html+ '<div id="bigpage">' + prevbtn +  '<div class="big-picture"> <img src="/small/' +str(id) +  '.jpg">' +'<p>%s</p>' + '</div>' + nextbtn +'</body></html>'
     
   html= headhtml+(html)% ('image name and description')
   return html
