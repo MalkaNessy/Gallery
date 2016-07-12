@@ -156,7 +156,7 @@ def big_html(id):
 
 closebtn = '''
     <div class="close">
-        <a href="">
+        <a href="/">
             <img src="/btn/close" alt="">
         </a>
     </div>
