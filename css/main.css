@@ -159,17 +159,27 @@ PAGE: BIG IMAGE
 }
 
 #bigpage {
-  /* border: 1px solid magenta;  */
+   border: 1px solid magenta;  
    clear: both;
    width: 90%;
-   margin: 0 auto;
+   /* width: 1000px; */
+    margin: 0 auto; 
 }
 
 
 #bigpage div{
-	display: inline-block;
+	/* display: inline-block; */
 	/* border: 1px solid red; */
+	
 }
+
+.container {
+	width: 80%; 
+	border: 3 solid black;
+	background-color: yellow;
+	margin: 0 auto;
+}
+
 
 .close {
 	/* border: 1px solid red; */
@@ -182,13 +192,17 @@ PAGE: BIG IMAGE
 }
 
 .btn  {
-  width: 10%;
+ /*  width: 40px; */
+  width: 5%;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+  float: left;
 }
 
-.big-picture  {
-  width: 70%;
+.big-picture {
+	width: 90%;
+  /* width: 600px; */
+   float: left;
 }
 
 .big-picture img {
