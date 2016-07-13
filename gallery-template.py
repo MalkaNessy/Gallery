@@ -1,4 +1,7 @@
 from bottle import *
+import pystache
+#print pystache.render('Hi {{person}}!', {'person': 'Mom'})
+#Hi Mom!
 
 foto_list = [  {'small':'numbers-01.jpg','big':'numbers-01.jpg'}, {'small':'numbers-02.jpg','big':'numbers-02.jpg'}, {'small':'numbers-06.jpg','big':'numbers-6.jpg'} , {'small':'numbers-09.jpg','big':'numbers-09.jpg'}, {'small':'numbers-12.jpg','big':'numbers-12.jpg'}]
 
